@@ -45,7 +45,7 @@ i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
     <p>this very cool site</p>
   </project-card>
 
-  <project-card onclick="window.open('https://buffer.thinliquid.dev')" style="--color:var(--maroon);">
+  <project-card onclick="window.open('https://t3rm-expl-dump.vercel.app/')" style="--color:var(--maroon);">
     <h3>exploit dump</h3>
     <p>a (chromebook/cros) exploit dump</p>
   </project-card>
