@@ -1,7 +1,7 @@
 ---
 title: Home
 description: hella cool home page
-color: purple
+color: lavender
 
 styles:
   - /style.css

@@ -217,16 +217,16 @@ ${dedent`
           emoji: string;
         }) => `<a href="${link}" class="no-style"><button>${parseEmojis(emoji)} ${title}</button></a>`).join(''),
 
-        color: ({ color = 'purple' }: {
+        color: ({ color = 'lavender' }: {
           color?: keyof typeof colors;
         }) => colors[color],
-        'color-name': ({ color = 'purple' }: {
+        'color-name': ({ color = 'lavender' }: {
           color?: keyof typeof colors;
         }) => color,
-        'color2': ({ color = 'purple' }: {
+        'color2': ({ color = 'lavender' }: {
           color?: keyof typeof colors;
         }) => colors[getNextInObj(colors, color)],
-        'color2-name': ({ color = 'purple' }: {
+        'color2-name': ({ color = 'lavender' }: {
           color?: keyof typeof colors;
         }) => getNextInObj(colors, color),
 
