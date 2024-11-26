@@ -47,9 +47,9 @@ const colors: Record<string, string> = {
   "surface2": "#585b70",
   "surface1": "#000000FF",
   "surface0": "#000000FF",
-  "base": "#000000FF",
-  "mantle": "#030303FF",
-  "crust": "#000000FF"
+  "base": "#000000",
+  "mantle": "#030303",
+  "crust": "#000000"
 }
 
 const getGitInfo = () => {
@@ -217,16 +217,16 @@ ${dedent`
           emoji: string;
         }) => `<a href="${link}" class="no-style"><button>${parseEmojis(emoji)} ${title}</button></a>`).join(''),
 
-        color: ({ color = 'blue' }: {
+        color: ({ color = 'purple' }: {
           color?: keyof typeof colors;
         }) => colors[color],
-        'color-name': ({ color = 'blue' }: {
+        'color-name': ({ color = 'purple' }: {
           color?: keyof typeof colors;
         }) => color,
-        'color2': ({ color = 'blue' }: {
+        'color2': ({ color = 'purple' }: {
           color?: keyof typeof colors;
         }) => colors[getNextInObj(colors, color)],
-        'color2-name': ({ color = 'blue' }: {
+        'color2-name': ({ color = 'purple' }: {
           color?: keyof typeof colors;
         }) => getNextInObj(colors, color),
 
