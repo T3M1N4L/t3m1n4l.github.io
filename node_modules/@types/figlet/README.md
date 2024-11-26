@@ -1,0 +1,15 @@
+# Installation
+> `npm install --save @types/figlet`
+
+# Summary
+This package contains type definitions for figlet (https://github.com/patorjk/figlet.js).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/figlet.
+
+### Additional Details
+ * Last updated: Tue, 07 Nov 2023 03:09:37 GMT
+ * Dependencies: none
+
+# Credits
+These definitions were written by .
