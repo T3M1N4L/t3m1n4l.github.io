@@ -2,7 +2,7 @@
 
 :root {
     --rosewater: 245, 224, 220;
-  --flamingo: 242, 205, 205;
+  --flamingo: 242, 205, 220;
   --pink: 245, 194, 231;
   --mauve: 203, 166, 247;
   --red: 243, 139, 168;
@@ -10,11 +10,11 @@
   --peach: 250, 179, 135;
   --yellow: 249, 226, 175;
   --green: 166, 227, 161;
-  --teal: 148, 226, 213;
+  --teal: 84, 222, 171;
   --sky: 137, 220, 235;
   --sapphire: 116, 199, 236;
   --blue: 137, 180, 250;
-  --lavender: 180, 190, 254;
+  --purple: 160, 87, 254;
   --text: 205, 214, 244;
   --subtext1: 186, 194, 222;
   --subtext0: 166, 173, 200;
@@ -24,15 +24,15 @@
   --surface2: 88, 91, 112;
   --surface1: 69, 71, 90;
   --surface0: 49, 50, 68;
-  --base: 30, 30, 46;
+  --base: 0, 0, 0;
   --mantle: 24, 24, 37;
-  --crust: 17, 17, 27;
+  --crust: 0, 0, 0;
   
     --bounce: cubic-bezier(0.175, 0.885, 0.32, 1.9);
   
     --monospace: 'Iosevka Term Web', 'Iosevka', 'Fira Code', 'JetBrains Mono', 'Menlo', 'Courier New', monospace;
   
-    --width: 800px;
+    --width: 900px;
   }
   
   body, html {
@@ -118,7 +118,7 @@
     z-index: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(var(--teal), 0.7), rgba(var(--sky), 0.9), rgba(var(--sapphire), 0.9), rgba(var(--blue), 0.5));
+    background:  rgba(var(--purple), 0.5);
     border-radius: 50%;
     filter: blur(50px);
     z-index: 0;

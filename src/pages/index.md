@@ -1,7 +1,7 @@
 ---
 title: Home
 description: hella cool home page
-color: blue
+color: purple
 
 styles:
   - /style.css
@@ -22,9 +22,10 @@ styles:
     </span>
   </h1>
   <div style="position:relative;z-index:10;">
-    <span class="chip">:bust_in_silhouette: he/him</span>
-    <span class="chip">:us:</span>
     <span class="chip">:computer: developer</span>
+    <span class="chip">:bust_in_silhouette: he/him</span>
+    <span class="chip">:sleeping: sleep deprived</span>
+    <span class="chip">:us: en_US</span>
   </div>
   <div class="blur"></div>
 </div>
@@ -32,16 +33,41 @@ styles:
 ## about me
 
 i'm a 13-year-old dev who does (mostly) frontend projects...
-over around 4 years i learnt ~~javascript~~ typescript, and css skills.
-i'm also currently learning python and flutter as of now!
+over around 4 years i learnt ~~typescript~~ css, and js skills.
+i'm also currently learning typescript, c++, and perfecting my skills in js as of now!
+i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
 
 ## projects
 
 <projects-container>
-  <!-- <project-card onclick="window.open('https://skibidi.net')" style="--color:var(--red);">
-    <h3>skib</h3>
-    <p>a skib</p>
+  <project-card onclick="window.open('https://t3rm1n4l.dev')" style="--color:var(--red);">
+    <h3>portfolio website</h3>
+    <p>this very cool site</p>
   </project-card>
-   -->
+
+  <project-card onclick="window.open('https://buffer.thinliquid.dev')" style="--color:var(--maroon);">
+    <h3>exploit dump</h3>
+    <p>a (chromebook/cros) exploit dump</p>
+  </project-card>
+
+  <project-card onclick="window.open('https://catninja.vercel.app/')" style="--color:var(--peach);">
+    <h3>cat ninja</h3>
+    <p>a website to play catninja and it's other romhacks</p>
+  </project-card>
+
+  <project-card onclick="window.open('https://github.com/T3M1N4L/rigtools-updated-ui')" style="--color:var(--yellow);">
+    <h3>rigtools updated ui</h3>
+    <p>an updated version of a devtools exploit with a better ui</p>
+  </project-card>
+
+  <project-card onclick="window.open('https://vimstart.vercel.app')" style="--color:var(--yellow);">
+    <h3>vimstart</h3>
+    <p>an interesting homepage</p>
+  </project-card>
+
+  <project-card onclick="window.open('https://github.com/t3m1n4l/AMOLED-comfy/')" style="--color:var(--teal);">
+    <h3>AMOLED-comfy</h3>
+    <p>a fork of a discord-client theme with automatic updates</p>
+  </project-card>
 </projects-container>
 <br/>
