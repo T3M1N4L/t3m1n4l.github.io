@@ -60,13 +60,13 @@ i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
     <p>an updated version of a devtools exploit with a better ui</p>
   </project-card>
 
-  <project-card onclick="window.open('https://vimstart.vercel.app')" style="--color:var(--yellow);">
+  <project-card onclick="window.open('https://vimstart.vercel.app')" style="--color:var(--green);">
     <h3>vimstart</h3>
     <p>an interesting homepage</p>
   </project-card>
 
   <project-card onclick="window.open('https://github.com/t3m1n4l/AMOLED-comfy/')" style="--color:var(--teal);">
-    <h3>AMOLED-comfy</h3>
+    <h3>amoled-comfy</h3>
     <p>a fork of a discord-client theme with automatic updates</p>
   </project-card>
 </projects-container>
