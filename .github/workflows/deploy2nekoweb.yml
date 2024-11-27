@@ -1,30 +1,36 @@
-name: deploy2nekoweb
+name: deploy2github
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+
 jobs:
-  deployer:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 'latest'
-
-      - name: installing dependencies
+      - name: Install Dependencies
         run: bun install --frozen-lockfile
-
-      - name: building code
+      - name: Build the Project
         run: bun run build
-
-      - name: deploy2nekoweb
-        uses: deploy2nekoweb/deploy2nekoweb@main
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
         with:
-          nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-          nekoweb-cookie: ${{ secrets.NEKOWEB_TOKEN }}
-          nekoweb-folder: 'site'
-          directory: 'dist'
+          branch: gh-pages
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./dist
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          source: ${{ path.artifact }}
