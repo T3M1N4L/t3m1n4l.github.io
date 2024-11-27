@@ -2,7 +2,7 @@ name: deploy2github
 
 on:
   push:
-    branches: [ main ]  
+    branches: [main]  
 
 jobs:
   deploy:
@@ -23,11 +23,9 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
-          # Set the source branch for deployment (change if needed)
-          branch: ${{ github.ref }}
+          branch: gh-pages  
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          # Upload the built project folder
-          source: ./dist
+          folder: dist  
