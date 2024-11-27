@@ -1,12 +1,16 @@
 name: deploy2nekoweb
-on: [push]
-workflow_dispatch:
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
 jobs:
   deployer:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 'latest'
