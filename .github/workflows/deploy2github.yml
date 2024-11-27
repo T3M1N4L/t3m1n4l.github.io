@@ -2,7 +2,14 @@ name: deploy2github
 
 on:
   push:
-    branches: [main]  
+    branches: [main]
+
+workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -23,9 +30,9 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
-          branch: gh-pages  
+          branch: gh-pages
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          folder: dist  
+          folder: dist
