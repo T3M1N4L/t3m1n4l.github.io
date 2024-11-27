@@ -135,7 +135,7 @@
     top: 0;
     z-index: 100;
   
-    background: linear-gradient(90deg, rgba(var(--color), 0.1), rgba(var(--color2), 0.1));
+    background: linear-gradient(90deg, rgba(var(--color), 0.02), rgba(var(--color2), 0.02));
     backdrop-filter: blur(20px);
     box-shadow: 0 5px 10px rgba(var(--base), 0.5);
     
@@ -176,7 +176,7 @@
   footer {
     margin-top: 50px;
     padding: 2rem 0;
-    background: linear-gradient(90deg, rgba(var(--color), 0.1), rgba(var(--color2), 0.1));
+    background: linear-gradient(90deg, rgba(var(--color), 0.02), rgba(var(--color2), 0.02));
     backdrop-filter: blur(20px);
     box-shadow: 0 -5px 10px rgba(var(--base), 0.5);
   
