@@ -1,6 +1,6 @@
 {
-    "name": "new-site",
-    "version": "5.1.0",
+    "name": "t3rm-site",
+    "version": "5.2.0",
     "module": "index.ts",
     "devDependencies": {
       "@types/bun": "latest",
