@@ -15,9 +15,9 @@
   --sapphire: 116, 199, 236;
   --blue: 137, 180, 250;
   --lavender: 160, 87, 254;
-  --text: 205, 214, 244;
-  --subtext1: 186, 194, 222;
-  --subtext0: 166, 173, 200;
+  --text: 237, 241, 255;
+  --subtext1: 195, 200, 222;
+  --subtext0: 175, 180, 200;
   --overlay2: 147, 153, 178;
   --overlay1: 127, 132, 156;
   --overlay0: 108, 112, 134;
@@ -32,7 +32,7 @@
   
     --monospace: 'Iosevka Term Web', 'Iosevka', 'Fira Code', 'JetBrains Mono', 'Menlo', 'Courier New', monospace;
   
-    --width: 900px;
+    --width: 950px;
   }
   
   body, html {
@@ -199,16 +199,12 @@
     }
   }
   
-  #nekowebring a {
-      border: none!important;
-      padding: 0;
-  }
   
   a {
     user-select: none;
     display: inline-flex;
     text-decoration: none;
-    cursor: pointer;
+    cursor: crosshair !important;
     padding: 2.5px 5px;
     border-radius: 7.5px;
     color: rgb(var(--color));
@@ -239,7 +235,7 @@
   }
   
   button {
-    cursor: pointer;
+    cursor: crosshair;
     padding: 5px 7.5px;
     border-radius: 7.5px;
     background: rgba(var(--mantle), 0.5);
@@ -498,7 +494,7 @@
   }
   
   .squishy {
-    cursor: pointer;
+    cursor: crosshair;
     transition: all .25s var(--bounce), color .25s, border-color .25s;
   
     &:hover {
