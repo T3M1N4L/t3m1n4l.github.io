@@ -1,6 +1,6 @@
 ---
 title: Home
-description: hella cool home page
+description: hello i'm t3rm1n4l
 color: lavender
 
 styles:
