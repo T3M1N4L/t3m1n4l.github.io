@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages
+name: deploy2github
 
 on:
   push:
-    branches: [main]  # Replace 'main' with your main branch name
+    branches: [ main ]  
 
 jobs:
   deploy:
@@ -20,8 +20,14 @@ jobs:
       - name: Build the Project
         run: bun run build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
         with:
-          branch: gh-pages  
-          folder: dist  
+          # Set the source branch for deployment (change if needed)
+          branch: ${{ github.ref }}
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          # Upload the built project folder
+          source: ./dist
