@@ -33,4 +33,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          source: ${{ path.artifact }}
+          artifact: github-pages
