@@ -23,25 +23,35 @@
 document.addEventListener("DOMContentLoaded", () => {
   const konamiSequence = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
   let position = 0;
+  let isArrowKeyActive = false;
 
   const disableScroll = () => {
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
+    window.addEventListener("keydown", preventArrowScroll);
   };
 
   const enableScroll = () => {
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
+    window.removeEventListener("keydown", preventArrowScroll);
   };
 
-  const showPopup = () => {
+  const preventArrowScroll = (e) => {
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+      e.preventDefault();
+    }
+  };
+
+  const showPopupWithDelay = () => {
     setTimeout(() => {
       alert("hi");
     }, 400);
   };
 
+  const showPopupInstantly = () => {
+    alert("hi");
+  };
+
   const handleKeydown = (e) => {
-    if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+      isArrowKeyActive = true;
       disableScroll();
     }
 
@@ -51,24 +61,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (position === konamiSequence.length) {
         position = 0;
-        showPopup();
+        isArrowKeyActive = false;
         enableScroll();
+        showPopupWithDelay();
       }
     } else {
       position = 0;
       document.querySelectorAll("#konami > kbd").forEach((key) => key.classList.remove("active"));
+      isArrowKeyActive = false;
+      enableScroll();
+    }
+  };
+
+  const handleKeyup = (e) => {
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+      isArrowKeyActive = false;
       enableScroll();
     }
   };
 
   const handleLazyButtonClick = (e) => {
     e.preventDefault();
-    alert("hi");
-    enableScroll();
+    showPopupInstantly();
   };
 
   document.addEventListener("keydown", handleKeydown);
-  document.querySelector('#lazy').addEventListener("click", handleLazyButtonClick);
+  document.addEventListener("keyup", handleKeyup);
+  document.querySelector("#lazy").addEventListener("click", handleLazyButtonClick);
 });
 
     </script>
