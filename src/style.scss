@@ -260,6 +260,42 @@
       border-image: linear-gradient(68deg, rgba(var(--color), 1), rgba(var(--surface1), 1)) 1;
     }
   }
+  #konami {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  
+    #lazy {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s ease-in-out;
+    }
+  
+    &:hover > #lazy,
+    &:focus-within > #lazy {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    kbd {
+      font-family: var(--monospace);
+      font-size: 0.9rem;
+      color: var(--subtext0);
+      border: 1px solid rgb(var(--overlay2), 0.8);
+      padding: 0.15rem 0.7rem;
+      border-radius: 4px;
+      transition: 0.4s ease-in-out;
+  
+      &.active {
+        color: rgb(var(--color), 1);
+        border-color: rgb(var(--color), 1);
+        box-shadow: 0 0 2rem 0 rgb(var(--color), 1);
+      }
+    }
+  }
+
+  
+  
   
   #content {
     flex: 1;
