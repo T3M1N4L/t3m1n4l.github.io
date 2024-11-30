@@ -1,7 +1,7 @@
 ---
 title: Blog
 description: my ultra super-duper-uber cool blog!!
-color: green
+color: pink
 
 styles:
   - /style.css
