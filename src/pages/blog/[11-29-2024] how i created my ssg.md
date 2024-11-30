@@ -7,7 +7,7 @@ color: teal
 page-type: post
 
 styles:
-  - ../style.css
+  - /style.css
 ---
 
 i was making a site for hackclub highseas, and i tought to my self, why not make a personal website? thats what your viewing this blog on rn... and then i tought that i'd prolly use this site for a long time, so it should be able to suit my needs. so i decided to create an ssg.
