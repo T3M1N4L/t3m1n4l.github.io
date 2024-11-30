@@ -234,6 +234,7 @@
     }
   }
   
+  
   button {
     cursor: crosshair;
     padding: 5px 7.5px;
@@ -257,7 +258,8 @@
     }
   
     &.big {
-      border-image: linear-gradient(68deg, rgba(var(--color), 1), rgba(var(--surface1), 1)) 1;
+      border-color: rgb(var(--color),0.8);
+      border-radius: .5rem;
     }
   }
   #konami {

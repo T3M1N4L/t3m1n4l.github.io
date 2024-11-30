@@ -88,6 +88,22 @@ const parseEmojis = (markdown: string): string => {
 const parseFilename = (filename: string): string =>
   filename.replace(/\[.*\] /g, '').replaceAll(" ", "-");
 
+const getBlogPosts = async () => {
+  const files = await readdir(path.join(__dirname, 'src/pages/blog'));
+  return await Promise.all(files.map(async (file) => {
+    
+    const { meta } = await parseMarkdownFile(await Bun.file(`src/pages/blog/${file}`).text());
+    return `
+    <a href="/blog/${parseFilename(file).replace(".md", '.html')}" class="no-style" >
+      <button class="big" style="background:var(--${meta.surface0});width:100%;padding:10px;text-align:left;--color:var(--${meta.color});">
+        <h2 style="margin: 0;margin-bottom:5px;">${meta.title}</h2>
+        <p style="margin:0;padding-bottom:5px;">${meta.description}</p>
+        <small>${meta.date}</small>
+      </button>
+    </a>`;
+  }));
+};
+
 const parseMarkdownFile = async (code: string) => {
   const file = code.match(/^---\n([\s\S]+?)\n---\n([\s\S]+)$/);
   if (!file) throw new Error('Invalid markdown file');
@@ -231,6 +247,8 @@ ${dedent`
         }) => getNextInObj(colors, color),
 
         styles: ({ styles = [] }: { styles?: string[] }) => styles.map(style => `<link rel="stylesheet" href="${style}">`).join('\n'),
+
+        'blog-posts': async () => (await getBlogPosts()).join('\n')
       }
     }
   ]
