@@ -37,10 +37,13 @@ type FilterFunction = (code: string, filename: string) => FilterOutput | Promise
 const filters: Map<string, FilterFunction> = new Map();
 
 const adjustRelativePaths = (content: string, filePath: string): string => {
-  // Adjust relative paths in the content (e.g., for CSS, JS, etc.)
   const directory = path.dirname(filePath);
-  return content.replace(/href="\/([^"]+)"/g, (_, link) => `href="./${path.relative(directory, path.join(directory, link))}"`);
+  return content.replace(/(href|src)="\/([^"]+)"/g, (_, attr, link) => {
+    const relativePath = path.relative(directory, path.join(directory, link));
+    return `${attr}="${relativePath.startsWith('.') ? relativePath : link}"`;
+  });
 };
+
 
 const build = async () => {
   const modulePath = require.resolve('./ssg.config.ts');
@@ -66,9 +69,22 @@ const build = async () => {
 
   console.log(`Loaded up ${filters.size} filters`);
 
-  const srcDir = await readdir(config.srcDirectory, { recursive: true });
+  const walkDir = async (dir: string, fileList: string[] = []): Promise<string[]> => {
+    const files = await readdir(dir);
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      if ((await stat(filePath)).isDirectory()) {
+        fileList = await walkDir(filePath, fileList);
+      } else {
+        fileList.push(path.relative(config.srcDirectory, filePath));
+      }
+    }
+    return fileList;
+  };
 
-  for (const file of srcDir) {
+  const srcFiles = await walkDir(config.srcDirectory);
+
+  for (const file of srcFiles) {
     const realPath = path.join(config.srcDirectory, file);
 
     if ((await stat(realPath)).isDirectory()) {
@@ -100,7 +116,6 @@ const build = async () => {
         outPath = outPath.replace(extname, newExtension);
       }
 
-      // Adjust relative paths before writing the output
       const adjustedCode = adjustRelativePaths(code, outPath);
 
       console.log(`Writing to ${outPath}`);

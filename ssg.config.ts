@@ -94,7 +94,7 @@ const getBlogPosts = async () => {
     
     const { meta } = await parseMarkdownFile(await Bun.file(`src/pages/blog/${file}`).text());
     return `
-    <a href="/blog/${parseFilename(file).replace(".md", '.html')}" class="no-style" >
+    <a href="/blog/${parseFilename(file).replace(".md", '')}" class="no-style" >
       <button class="big" style="background:var(--${meta.surface0});width:100%;padding:10px;text-align:left;--color:var(--${meta.color});">
         <h2 style="margin: 0;margin-bottom:5px;">${meta.title}</h2>
         <p style="margin:0;padding-bottom:5px;">${meta.description}</p>
