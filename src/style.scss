@@ -216,6 +216,18 @@
       border: none!important;
       padding: 0;
     }
+
+    &.socials {
+      text-decoration-style: wavy;
+      text-decoration-line: underline;
+      text-decoration-color: rgb(var(--color));
+    
+      &:hover {
+        transform: scale(1.05) skew(-5deg);
+        text-decoration-thickness: 2px;
+      }
+    }
+    
   
     &:not(.no-style) {
       &:hover {
@@ -282,7 +294,7 @@
   
     kbd {
       font-family: var(--monospace);
-      font-size: 0.9rem;
+      font-size: 0.6rem;
       color: var(--subtext0);
       border: 1px solid rgb(var(--overlay2), 0.8);
       padding: 0.15rem 0.7rem;

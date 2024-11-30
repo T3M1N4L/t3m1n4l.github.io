@@ -1,13 +1,13 @@
 ---
 title: Blog
 description: my ultra super-duper-uber cool blog!!
-color: pink
+color: mauve
 
 styles:
   - /style.css
 ---
 
-# blog
+# yapping
 my ultra super-duper-uber cool blog!!
 
 <div style="display: flex;flex-direction:column;gap:10px;">
