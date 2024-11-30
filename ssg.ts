@@ -38,7 +38,7 @@ const filters: Map<string, FilterFunction> = new Map();
 
 const adjustRelativePaths = (content: string, filePath: string): string => {
   const directory = path.dirname(filePath);
-  return content.replace(/(href|src)="\/([^"]+)"/g, (_, attr, link) => {
+  return content.replace(/(href|src)="(?!\/)([^"]+)"/g, (_, attr, link) => {
     const relativePath = path.relative(directory, path.join(directory, link));
     return `${attr}="${relativePath.startsWith('.') ? relativePath : link}"`;
   });
