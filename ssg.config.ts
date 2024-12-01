@@ -185,7 +185,7 @@ export default defineConfig({
           }
 
           const comment = `<!--
-${figlet.textSync("t3rm1n4l.dev", { font: "Small Slant" })}
+${figlet.textSync("t3rm1n4l", { font: "Small Slant" })}
 ${dedent`
   this HTML file was generated from "${filename}" using my own SSG!
   check out the source code at: https://github.com/T3M1N4L/t3rm-site

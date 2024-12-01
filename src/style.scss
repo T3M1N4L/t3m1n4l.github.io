@@ -49,11 +49,57 @@
     width: 100vw;
   
     &.personality {
+
+      @font-face {
+        font-family: 'Yuruka';
+        font-display: swap;
+        font-weight: 100;
+        font-stretch: expanded;
+        font-style: normal;
+        src:  url('/TTF/yuruka.ttf') format('truetype');
+    }
       --monospace: MS Gothic, 'Iosevka Term Web', 'Iosevka', 'Fira Code', 'JetBrains Mono', 'Menlo', 'Courier New', monospace;
     
       * {
         * { font-family: var(--monospace); }
       }
+      h1,h2,h3,h4,h5,h6, .letters, .letter, .period{
+         font-family: 'Yuruka' !important;
+      }
+      .navtitle {
+        background: url(/vtuber.svg) no-repeat center bottom;
+        background-size: contain;
+        display: block;
+        width: 15rem;
+        height: 7rem;
+        text-indent: -99999em;
+        padding-top: 5rem;
+        transition: transform 0.5s ease;
+      
+        &:hover {
+          animation: gelatine 0.5s infinite;
+        }
+      }
+      
+      @keyframes gelatine {
+        from,
+        to {
+          transform: scale(1, 1);
+        }
+      
+        25% {
+          transform: scale(0.95, 1.05);
+        }
+      
+        50% {
+          transform: scale(1.05, 0.95);
+        }
+      
+        75% {
+          transform: scale(0.98, 1.02);
+        }
+      }
+      
     }
   
     &.monospace {
@@ -65,7 +111,7 @@
   
   * {
     will-change: filter;
-    scrollbar-color: rgb(var(--color)) rgb(var(--mantle));
+    scrollbar-color: rgb(var(--color)) rgb(var(--mantle), 0.5);
     scrollbar-width: thin;
     
     color: rgb(var(--text));
@@ -224,7 +270,6 @@
     
       &:hover {
         transform: scale(1.05) skew(-5deg);
-        text-decoration-thickness: 2px;
       }
     }
     
@@ -290,6 +335,8 @@
     &:focus-within > #lazy {
       opacity: 1;
       pointer-events: auto;
+      transition: all .5s var(--bounce), color .25s, border-color .25s;
+      transform: scale(1.05) skew(-5deg);
     }
   
     kbd {
@@ -300,11 +347,12 @@
       padding: 0.15rem 0.7rem;
       border-radius: 4px;
       transition: 0.4s ease-in-out;
+      z-index: 20 !important;
   
       &.active {
         color: rgb(var(--color), 1);
         border-color: rgb(var(--color), 1);
-        box-shadow: 0 0 2rem 0 rgb(var(--color), 1);
+        box-shadow: 0 0 .5rem 0 rgb(var(--color), 0.4);
       }
     }
   }

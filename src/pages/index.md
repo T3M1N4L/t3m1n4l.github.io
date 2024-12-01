@@ -18,7 +18,7 @@ styles:
       <span class="letter">n</span>
       <span class="letter">4</span>
       <span class="letter">l</span>
-      <span>.</span>
+      <span class="period">.</span>
     </span>
   </h1>
   <div style="position:relative;z-index:10;">
