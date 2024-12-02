@@ -41,12 +41,12 @@
     background: rgb(var(--base));
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
     overflow-x: hidden;
   }
   
   html,body {
-    width: 100vw;
+    width: 100%;
   
     &.personality {
 
@@ -110,7 +110,6 @@
   }
   
   * {
-    will-change: filter;
     scrollbar-color: rgb(var(--color)) rgb(var(--mantle), 0.5);
     scrollbar-width: thin;
     

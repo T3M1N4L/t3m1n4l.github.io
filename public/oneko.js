@@ -175,7 +175,7 @@ function isMobile(opts) {
     nekoEl.style.backgroundSize = `${convertRemToPixels(nekoRem) * 8}px ${
       convertRemToPixels(nekoRem) * 4
     }px`;
-    nekoEl.style.position = "absolute";
+    nekoEl.style.position = "fixed";
     nekoEl.style.pointerEvents = "none";
     nekoEl.style.imageRendering = "pixelated";
     nekoEl.style.left = `${nekoPosX - 16}px`;
@@ -198,11 +198,9 @@ function isMobile(opts) {
       if (!document.getElementById("oneko")) {
         init();
       }
-      mousePosX = event.clientX + window.scrollX;
-      mousePosY = event.clientY + window.scrollY;
-      
+      mousePosX = event.clientX;
+      mousePosY = event.clientY;
     });
-    
 
     window.requestAnimationFrame(onAnimationFrame);
   }
@@ -329,16 +327,14 @@ function isMobile(opts) {
     nekoPosX -= (diffX / distance) * nekoSpeed;
     nekoPosY -= (diffY / distance) * nekoSpeed;
 
-    nekoPosX = Math.min(Math.max(16, nekoPosX), document.documentElement.scrollWidth - 16);
-    nekoPosY = Math.min(Math.max(16, nekoPosY), document.documentElement.scrollHeight - 16);    
+    nekoPosX = Math.min(Math.max(16, nekoPosX), window.innerWidth - 16);
+    nekoPosY = Math.min(Math.max(16, nekoPosY), window.innerHeight - 16);
 
-    updatePos();
-  }
-
-  function updatePos() {
-      nekoEl.style.left = `${nekoPosX - 16}px`;
-      nekoEl.style.top = `${nekoPosY - 16}px`;
+    nekoEl.style.left = `${nekoPosX - 16}px`;
+    nekoEl.style.top = `${nekoPosY - 16}px`;
   }
 
   init();
 })();
+
+// @license-end
