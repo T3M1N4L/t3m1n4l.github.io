@@ -241,6 +241,36 @@
       max-width: var(--width);
       margin: 0 auto;
       padding: 0 20px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 600px) {
+      & .inner {
+        flex-wrap: wrap; /* Ensures content wraps properly on small screens */
+      }
+  
+      & p, & h4, & #konami {
+        flex: 1 1 auto; /* Allow elements to grow/shrink as needed */
+        min-width: 0;   /* Prevent overflowing due to intrinsic sizing */
+        word-wrap: break-word; /* Wrap long words */
+      }
+  
+      & #konami {
+        display: flex;
+        flex-wrap: wrap; /* Ensure buttons wrap to the next line */
+        gap: 5px;        /* Add spacing between buttons */
+      }
+  
+      & kbd {
+        padding: 5px 10px;
+        border: 1px solid rgba(var(--color), 0.5);
+        border-radius: 4px;
+        background: rgba(var(--color), 0.1);
+      }
+  
+      & #lazy {
+        display: block;
+        margin-top: 0.5rem;
+      }
     }
   }
   
