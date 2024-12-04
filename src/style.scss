@@ -244,6 +244,12 @@
       flex-wrap: wrap;
     }
     @media (max-width: 600px) {
+      footer {
+        min-height: fit-content;
+        margin-bottom:0;
+        padding: 1rem 0;
+      }
+      
       & .inner {
         flex-wrap: wrap; /* Ensures content wraps properly on small screens */
         padding: 0 10px; /* Reduce padding for small screens */
