@@ -258,6 +258,7 @@
         display: flex;
         flex-wrap: wrap; /* Ensure buttons wrap to the next line */
         gap: 5px;        /* Add spacing between buttons */
+        margin-bottom: 0;
       }
   
       & kbd {
