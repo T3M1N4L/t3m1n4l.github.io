@@ -185,7 +185,7 @@ function isMobile(opts) {
     nekoEl.style.opacity = 1;
     }, 2);
 
-    let nekoFile = "/oneko.gif";
+    let nekoFile = "/img/oneko.gif";
     const curScript = document.currentScript;
     if (curScript && curScript.dataset.cat) {
       nekoFile = curScript.dataset.cat;
