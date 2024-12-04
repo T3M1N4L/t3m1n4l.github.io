@@ -246,6 +246,7 @@
     @media (max-width: 600px) {
       & .inner {
         flex-wrap: wrap; /* Ensures content wraps properly on small screens */
+        padding: 0 10px; /* Reduce padding for small screens */
       }
   
       & p, & h4, & #konami {
