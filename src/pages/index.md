@@ -42,32 +42,32 @@ i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
 <projects-container>
   <project-card onclick="window.open('https://t3rm1n4l.dev')" style="--color:var(--red);">
     <h3>portfolio website</h3>
-    <p>this very cool site which i initally made for hackclub highseas</p>
+    <p>this very cool site</p>
   </project-card>
 
   <project-card onclick="window.open('https://t3rm-expl-dump.vercel.app/')" style="--color:var(--maroon);">
     <h3>exploit dump</h3>
-    <p>a (chromebook/cros) exploit dump, along with a few other exploits mainly focusing on internet censorship)/p>
+    <p>a (chromebook/cros) exploit dump</p>
   </project-card>
 
   <project-card onclick="window.open('https://catninja.vercel.app/')" style="--color:var(--peach);">
     <h3>cat ninja</h3>
-    <p>a website to play catninja and it's other romhacks, made along with the speedrunning community</p>
+    <p>a website to play catninja and it's other romhacks</p>
   </project-card>
 
   <project-card onclick="window.open('https://github.com/T3M1N4L/rigtools-updated-ui')" style="--color:var(--yellow);">
     <h3>rigtools updated ui</h3>
-    <p>an updated version of a devtools exploit with a better ui, and way more features</p>
+    <p>an updated version of a devtools exploit with a better ui</p>
   </project-card>
 
   <project-card onclick="window.open('https://vimstart.vercel.app')" style="--color:var(--green);">
     <h3>vimstart</h3>
-    <p>a homepage with an aesthetically appeasing look, and cuztomizablity if you edit the json</p>
+    <p>an interesting homepage</p>
   </project-card>
 
   <project-card onclick="window.open('https://github.com/t3m1n4l/AMOLED-comfy/')" style="--color:var(--teal);">
     <h3>amoled-comfy</h3>
-    <p>a fork of a discord-client theme with automatic updates, looks cool imo</p>
+    <p>a fork of a discord-client theme with automatic updates</p>
   </project-card>
 </projects-container>
 <br/>
