@@ -224,6 +224,9 @@
     background: linear-gradient(90deg, rgba(var(--color), 0.02), rgba(var(--color2), 0.02));
     backdrop-filter: blur(20px);
     box-shadow: 0 -5px 10px rgba(var(--base), 0.5);
+    word-break: break-all; /* Break words at any character */
+    overflow-wrap: break-word; /* Break long words */
+    white-space: normal; /* Allow normal wrapping */
   
     &::before {
       content: '';
@@ -247,20 +250,20 @@
       footer {
         min-height: fit-content;
         margin-bottom:0;
-
       }
       
       & .inner {
-        flex-wrap: wrap; /* Ensures content wraps properly on small screens */
-        padding: 0 10px; /* Reduce padding for small screens */
+        flex-direction: column; // Stack items vertically on small screens
+        padding: 0 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
   
       & p, & h4, & #konami {
-        flex: 1 1 auto; /* Allow elements to grow/shrink as needed */
-        min-width: 0;   /* Prevent overflowing due to intrinsic sizing */
-        word-wrap: break-word; /* Wrap long words */
+        flex: 1 1 auto;
+        min-width: 0;
+        word-wrap: break-word;
       }
-  
       & #konami {
         display: flex;
         flex-wrap: wrap; /* Ensure buttons wrap to the next line */
@@ -270,9 +273,6 @@
   
       & kbd {
         padding: 5px 10px;
-        border: 1px solid rgba(var(--color), 0.5);
-        border-radius: 4px;
-        background: rgba(var(--color), 0.1);
       }
   
       & #lazy {
