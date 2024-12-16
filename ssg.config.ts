@@ -130,7 +130,7 @@ const format = async (code: string, parser: prettier.Options['parser']) => await
   plugins: [(await import('@prettier/plugin-xml')).default]
 })
 
-const SITE_URL = 'https://t3rm1n4l.dev';
+const SITE_URL = 't3rm1n4l';
 const OUTPUT_FOLDER = 'dist';
 
 export default defineConfig({
@@ -188,7 +188,7 @@ export default defineConfig({
 ${figlet.textSync("t3rm1n4l", { font: "Small Slant" })}
 ${dedent`
   this HTML file was generated from "${filename}" using my own SSG!
-  check out the source code at: https://github.com/T3M1N4L/t3rm-site
+  check out the source code at: https://github.com/T3M1N4L/t3m1n4l.github.io
 `}
 -->\n`;
 
