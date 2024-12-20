@@ -1,6 +1,6 @@
 # t3rm1n4l's personal site
 
-Personal site/portfolio/blog, built with [Bun](https://bun.sh/) and [SCSS](https://tailwindcss.com/), and hosted on [Github Page](https://hackclub.app/)! ft. aesthetic, and a responsive, mobile-friendly design. Buily my own SSG to build the website to go with it!
+Personal site/portfolio/blog, built with [Bun](https://bun.sh/) and [SCSS](https://tailwindcss.com/), and hosted on [Github Page](https://hackclub.app/)! ft. aesthetic, and a responsive, mobile-friendly design. Built my own SSG to build the website to go with it!
 
 
 ## Development
