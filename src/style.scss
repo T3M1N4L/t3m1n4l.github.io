@@ -362,12 +362,11 @@ button {
   padding: 5px 7.5px;
   border-radius: 7.5px;
   background: rgba(var(--mantle), 0.5);
-  border: 2px solid rgba(var(--mantle), 0);
-
-  transition: all 0.5s var(--bounce), color 0.25s, border-color 0.25s;
-
+  border: 2px dashed rgba(var(--mantle), 0.9);
+  transition: all 0.5s var(--bounce), color 0.25s, border 0.25s;
   &:hover {
     transform: scale(1.02);
+    border: 2px dashed rgba(var(--color));
   }
 
   &:active {
