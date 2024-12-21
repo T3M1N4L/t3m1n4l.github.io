@@ -137,6 +137,7 @@ body {
 
   * {
     font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
+    font-display: swap;
   }
 }
 
@@ -281,8 +282,8 @@ footer {
     }
 
     & .inner {
-      flex-direction: column; // Stack items vertically on small screens
-      padding: 0 10px;
+      flex-direction: column; 
+      padding: 0 2rem;
       word-wrap: break-word;
       overflow-wrap: break-word;
     }
