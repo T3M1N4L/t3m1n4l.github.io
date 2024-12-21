@@ -12,5 +12,5 @@ styles:
   - use this becuase i'm on discord the most (im not a discord mod, ong :sob:)
 * <a class="no-style socials" href="https://github.com/T3M1N4L/">Github</a>
   - make sure to check out my readme, and give a follow please :pray:
-* email 1: [contact@t3rm1n4l.dev](mailto:contact@t3rm1n4l.dev)
+* email: [contact@t3rm1n4l.dev](mailto:contact@t3rm1n4l.dev)
   - i might be slow to respond :shrug:

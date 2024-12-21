@@ -81,6 +81,7 @@ function isMobile(opts) {
   if (isReducedMotion) return;
 
   const nekoEl = document.createElement("div");
+  let persistPosition = true;
 
   function convertRemToPixels(rem) {
     return (
