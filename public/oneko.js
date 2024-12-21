@@ -167,6 +167,35 @@ function isMobile(opts) {
   };
 
   function init() {
+
+    let nekoFile = "/img/oneko.gif"
+    const curScript = document.currentScript
+    if (curScript && curScript.dataset.cat) {
+      nekoFile = curScript.dataset.cat
+    }
+    if (curScript && curScript.dataset.persistPosition) {
+      if (curScript.dataset.persistPosition === "") {
+        persistPosition = true;
+      } else {
+        persistPosition = JSON.parse(curScript.dataset.persistPosition.toLowerCase());
+      }
+    }
+
+    if (persistPosition) {
+      let storedNeko = JSON.parse(window.localStorage.getItem("oneko"));
+      if (storedNeko !== null) {
+        nekoPosX = storedNeko.nekoPosX;
+        nekoPosY = storedNeko.nekoPosY;
+        mousePosX = storedNeko.mousePosX;
+        mousePosY = storedNeko.mousePosY;
+        frameCount = storedNeko.frameCount;
+        idleTime = storedNeko.idleTime;
+        idleAnimation = storedNeko.idleAnimation;
+        idleAnimationFrame = storedNeko.idleAnimationFrame;
+        nekoEl.style.backgroundPosition = storedNeko.bgPos;
+      }
+    }
+
     nekoEl.style.transition = "0.5s opacity";
     nekoEl.id = "oneko";
     nekoEl.ariaHidden = true;
@@ -185,11 +214,7 @@ function isMobile(opts) {
     nekoEl.style.opacity = 1;
     }, 2);
 
-    let nekoFile = "/img/oneko.gif";
-    const curScript = document.currentScript;
-    if (curScript && curScript.dataset.cat) {
-      nekoFile = curScript.dataset.cat;
-    }
+
     nekoEl.style.backgroundImage = `url(${nekoFile})`;
 
     document.body.appendChild(nekoEl);
@@ -202,6 +227,21 @@ function isMobile(opts) {
       mousePosY = event.clientY;
     });
 
+    if (persistPosition) {
+      window.addEventListener("beforeunload", function (event) {
+        window.localStorage.setItem("oneko", JSON.stringify({
+          nekoPosX: nekoPosX,
+          nekoPosY: nekoPosY,
+          mousePosX: mousePosX,
+          mousePosY: mousePosY,
+          frameCount: frameCount,
+          idleTime: idleTime,
+          idleAnimation: idleAnimation,
+          idleAnimationFrame: idleAnimationFrame,
+          bgPos: nekoEl.style.backgroundPosition
+        }));
+      });
+    }
     window.requestAnimationFrame(onAnimationFrame);
   }
 
