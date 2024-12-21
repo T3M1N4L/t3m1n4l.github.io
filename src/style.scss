@@ -124,7 +124,7 @@ body {
 * {
   scrollbar-color: rgb(var(--color)) rgb(var(--mantle), 0.5);
   scrollbar-width: thin;
-
+  scroll-behavior: smooth;
   color: rgb(var(--text));
   box-sizing: border-box;
   font-display: optional;
