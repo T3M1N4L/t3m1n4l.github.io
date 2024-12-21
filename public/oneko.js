@@ -1,14 +1,10 @@
-// oneko.js: https://github.com/adryd325/oneko.js
-// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
-
-var _eventHandlers = {}; // somewhere global
+var _eventHandlers = {}; 
 
 const addListener = (node, event, handler, capture = false) => {
   if (!(event in _eventHandlers)) {
     _eventHandlers[event] = [];
   }
-  // here we track the events and their nodes (note that we cannot
-  // use node as Object keys, as they'd get coerced into a string
+
   _eventHandlers[event].push({
     node: node,
     handler: handler,
@@ -18,16 +14,15 @@ const addListener = (node, event, handler, capture = false) => {
 };
 
 const removeAllListeners = (targetNode, event) => {
-  // check if _eventHandlers[event] is defined
+
   if (_eventHandlers[event]) {
-    // remove listeners from the matching nodes
+
     _eventHandlers[event]
       .filter(({ node }) => node === targetNode)
       .forEach(({ node, handler, capture }) =>
         node.removeEventListener(event, handler, capture)
       );
 
-    // update _eventHandlers global
     _eventHandlers[event] = _eventHandlers[event].filter(
       ({ node }) => node !== targetNode
     );
@@ -215,7 +210,6 @@ function isMobile(opts) {
     nekoEl.style.opacity = 1;
     }, 2);
 
-
     nekoEl.style.backgroundImage = `url(${nekoFile})`;
 
     document.body.appendChild(nekoEl);
@@ -249,7 +243,7 @@ function isMobile(opts) {
   let lastFrameTimestamp;
 
   function onAnimationFrame(timestamp) {
-    // Stops execution if the neko element is removed from DOM
+
     if (!nekoEl.isConnected) {
       return;
     }
@@ -278,7 +272,6 @@ function isMobile(opts) {
   function idle() {
     idleTime += 1;
 
-    // every ~ 12 seconds
     if (
       idleTime > 6 &&
       Math.floor(Math.random() * 200) == 0 &&
@@ -352,7 +345,7 @@ function isMobile(opts) {
 
     if (idleTime > 1) {
       setSprite("alert", 0);
-      // count down after being alerted before moving
+
       idleTime = Math.min(idleTime, 3.5);
       idleTime -= 1;
       return;
@@ -378,4 +371,3 @@ function isMobile(opts) {
   init();
 })();
 
-// @license-end
