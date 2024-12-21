@@ -45,27 +45,27 @@ i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
     <p>this very cool site</p>
   </project-card>
 
-  <project-card onclick="window.open('https://t3rm-expl-dump.vercel.app/')" style="--color:var(--maroon);">
+  <project-card onclick="window.open('https://t3rm-expl-dump.vercel.app/')" style="--color:var(--peach);">
     <h3>exploit dump</h3>
     <p>a (chromebook/cros) exploit dump</p>
   </project-card>
 
-  <project-card onclick="window.open('https://catninja.vercel.app/')" style="--color:var(--peach);">
+  <project-card onclick="window.open('https://catninja.vercel.app/')" style="--color:var(--yellow);">
     <h3>cat ninja</h3>
     <p>a website to play catninja and it's other romhacks</p>
   </project-card>
 
-  <project-card onclick="window.open('https://github.com/T3M1N4L/rigtools-updated-ui')" style="--color:var(--yellow);">
+  <project-card onclick="window.open('https://github.com/T3M1N4L/rigtools-updated-ui')" style="--color:var(--green);">
     <h3>rigtools updated ui</h3>
     <p>an updated version of a devtools exploit with a better ui</p>
   </project-card>
 
-  <project-card onclick="window.open('https://vimstart.vercel.app')" style="--color:var(--green);">
+  <project-card onclick="window.open('https://vimstart.vercel.app')" style="--color:var(--teal);">
     <h3>vimstart</h3>
     <p>an interesting homepage</p>
   </project-card>
 
-  <project-card onclick="window.open('https://github.com/t3m1n4l/AMOLED-comfy/')" style="--color:var(--teal);">
+  <project-card onclick="window.open('https://github.com/t3m1n4l/AMOLED-comfy/')" style="--color:var(--blue);">
     <h3>amoled-comfy</h3>
     <p>a fork of a discord-client theme with automatic updates</p>
   </project-card>
