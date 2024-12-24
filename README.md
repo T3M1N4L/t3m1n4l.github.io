@@ -1,6 +1,6 @@
 # t3rm1n4l's personal site
 
-![A aesthetically pleasing preview](./public/img/preview-min.webp)
+![A aesthetically pleasing preview](./public/img/preview.webp)
 
 
 Personal site/portfolio/blog, built with [Bun](https://bun.sh/) and [SCSS](https://tailwindcss.com/), and hosted on [Github Pages](https://hackclub.app/)! ft. aesthetic, and a responsive, mobile-friendly design. Built my own SSG to build the website to go with it!
