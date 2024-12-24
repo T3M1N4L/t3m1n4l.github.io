@@ -1,6 +1,6 @@
 ---
 title: Home
-description: hello i'm t3rm1n4l
+description: i'm a 13-year-old developer who works on frontend projects and has been coding for 4 years.
 color: lavender
 
 styles:

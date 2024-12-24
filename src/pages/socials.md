@@ -1,6 +1,6 @@
 ---
 title: Socials
-description: my social media accounts
+description: my various social media accounts/how to contact me
 color: teal
 
 styles:

@@ -1,6 +1,6 @@
 ---
 title: Blog
-description: my ultra super-duper-uber cool blog!!
+description: my ultra super-duper-uber cool blog where i yap and ramble about various things!!
 color: mauve
 
 styles:
