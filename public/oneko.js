@@ -368,6 +368,6 @@ function isMobile(opts) {
     nekoEl.style.top = `${nekoPosY - 16}px`;
   }
 
-  init();
+  document.addEventListener("DOMContentLoaded", init);
 })();
 
