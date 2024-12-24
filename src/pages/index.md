@@ -8,7 +8,7 @@ styles:
 ---
 
 <div style="text-align:center;position:relative;margin: 120px 0;">
-  <h1 style="position:relative;z-index:10;font-size: 3em;margin:15px 0;">
+  <h1 style="position:relative;z-index:10;font-size: 3.2em;margin:15px 0;">
     hi, i'm <span class="letters">
       <span class="letter">t</span>
       <span class="letter">3</span>
