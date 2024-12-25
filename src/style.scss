@@ -478,6 +478,10 @@ ol {
   margin: 0;
 }
 
+ul,li,.fli{
+  margin-bottom:0.5rem;
+}
+
 ol li::before {
   content: " ";
   color: rgb(var(--color));
