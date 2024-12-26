@@ -738,3 +738,91 @@ progress {
     border-color: rgb(var(--color));
   }
 }
+
+@keyframes textflicker {
+	from {
+		text-shadow: 1px 0 0 rgb(var(--red)), -1px 0 0 rgb(var(--blue));
+	}
+	to {
+		text-shadow: 2px 0.5px 2px rgb(var(--red)), -1px -0.5px 1px rgb(var(--blue));
+	}
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.27861;
+	}
+	5% {
+		opacity: 0.34769;
+	}
+	10% {
+		opacity: 0.23604;
+	}
+	15% {
+		opacity: 0.90626;
+	}
+	20% {
+		opacity: 0.18128;
+	}
+	25% {
+		opacity: 0.83891;
+	}
+	30% {
+		opacity: 0.65583;
+	}
+	35% {
+		opacity: 0.67807;
+	}
+	40% {
+		opacity: 0.26559;
+	}
+	45% {
+		opacity: 0.84693;
+	}
+	50% {
+		opacity: 0.96019;
+	}
+	55% {
+		opacity: 0.08594;
+	}
+	60% {
+		opacity: 0.20313;
+	}
+	65% {
+		opacity: 0.71988;
+	}
+	70% {
+		opacity: 0.53455;
+	}
+	75% {
+		opacity: 0.37288;
+	}
+	80% {
+		opacity: 0.71428;
+	}
+	85% {
+		opacity: 0.70419;
+	}
+	90% {
+		opacity: 0.7003;
+	}
+	95% {
+		opacity: 0.36108;
+	}
+	100% {
+		opacity: 0.24387;
+	}
+}
+@keyframes textShadow {
+	0% {
+		text-shadow: 0.4px 0 1px rgba(0, 30, 255, 0.5), -0.4px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+	}
+	5% {
+		text-shadow: 2.8px 0 1px rgba(0, 30, 255, 0.5), -2.8px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+	}
+	100% {
+		text-shadow: 2.6px 0 1px rgba(0, 30, 255, 0.5), -2.8px 3px 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+	}
+}
+body.retro {
+	animation: textflicker 0.01s infinite alternate;
+}

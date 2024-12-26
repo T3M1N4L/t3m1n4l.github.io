@@ -1,69 +1,72 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const konamiSequence = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
-    let position = 0;
-    let isArrowKeyActive = false;
-  
-    const disableScroll = () => {
+  const konamiSequence = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+  let position = 0;
+  let isArrowKeyActive = false;
+
+  const toggleRetroEffect = () => {
+      const retroEnabled = localStorage.getItem("retro") === "true";
+      const newRetroState = !retroEnabled;
+
+      document.body.classList.toggle("retro", newRetroState);
+
+      localStorage.setItem("retro", newRetroState);
+  };
+
+  const disableScroll = () => {
       window.addEventListener("keydown", preventArrowScroll);
-    };
-  
-    const enableScroll = () => {
+  };
+
+  const enableScroll = () => {
       window.removeEventListener("keydown", preventArrowScroll);
-    };
-  
-    const preventArrowScroll = (e) => {
+  };
+
+  const preventArrowScroll = (e) => {
       if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
-        e.preventDefault();
+          e.preventDefault();
       }
-    };
-  
-    const showPopupWithDelay = () => {
-      setTimeout(() => {
-        alert("hi");
-      }, 400);
-    };
-  
-    const showPopupInstantly = () => {
-      alert("hi");
-    };
-  
-    const handleKeydown = (e) => {
+  };
+
+  const handleKeydown = (e) => {
       if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
-        isArrowKeyActive = true;
-        disableScroll();
+          isArrowKeyActive = true;
+          disableScroll();
       }
-  
+
       if (e.key === konamiSequence[position]) {
-        document.getElementById(`k${position}`)?.classList.add("active");
-        position++;
-  
-        if (position === konamiSequence.length) {
+          document.getElementById(`k${position}`)?.classList.add("active");
+          position++;
+
+          if (position === konamiSequence.length) {
+              position = 0;
+              isArrowKeyActive = false;
+              enableScroll();
+              toggleRetroEffect(); 
+          }
+      } else {
           position = 0;
+          document.querySelectorAll("#konami > kbd").forEach((key) => key.classList.remove("active"));
           isArrowKeyActive = false;
           enableScroll();
-          showPopupWithDelay();
-        }
-      } else {
-        position = 0;
-        document.querySelectorAll("#konami > kbd").forEach((key) => key.classList.remove("active"));
-        isArrowKeyActive = false;
-        enableScroll();
       }
-    };
-  
-    const handleKeyup = (e) => {
+  };
+
+  const handleKeyup = (e) => {
       if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
-        isArrowKeyActive = false;
-        enableScroll();
+          isArrowKeyActive = false;
+          enableScroll();
       }
-    };
-  
-    const handleLazyButtonClick = (e) => {
+  };
+
+  const handleLazyButtonClick = (e) => {
       e.preventDefault();
-      showPopupInstantly();
-    };
-  
-    document.addEventListener("keydown", handleKeydown);
-    document.addEventListener("keyup", handleKeyup);
-    document.querySelector("#lazy").addEventListener("click", handleLazyButtonClick);
-  });  
+      toggleRetroEffect(); 
+  };
+
+  document.addEventListener("keydown", handleKeydown);
+  document.addEventListener("keyup", handleKeyup);
+  document.querySelector("#lazy").addEventListener("click", handleLazyButtonClick);
+
+  if (localStorage.getItem("retro") === "true") {
+      document.body.classList.add("retro");
+  }
+});
