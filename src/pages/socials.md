@@ -23,4 +23,4 @@ styles:
   - @\_T3RM1N4L_
   - i barely use reddit
 
-### If you send spamish/weird messages, you will be ignored.
+### if you send spamish/weird messages, you will be ignored.

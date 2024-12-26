@@ -1,6 +1,6 @@
 ---
 title: Blog
-description: my ultra super-duper-uber cool blog where i yap and ramble about various things!!
+description: my ultra super-duper cool blog where i yap and ramble about various things!!
 color: mauve
 
 styles:
@@ -8,7 +8,7 @@ styles:
 ---
 
 # yapping
-my ultra super-duper-uber cool blog!!
+my ultra super-duper cool blog where i yap and ramble about various stuff!!
 
 <div style="display: flex;flex-direction:column;gap:10px;">
   <!-- variable:blog-posts -->

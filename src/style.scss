@@ -415,7 +415,7 @@ button {
     &.active {
       color: rgb(var(--color), 1);
       border-color: rgb(var(--color), 1);
-      box-shadow: 0 0 0.5rem 0 rgb(var(--color), 0.4);
+      box-shadow: 0 0 1.5rem 0 rgb(var(--color), 0.5);
     }
   }
 }
