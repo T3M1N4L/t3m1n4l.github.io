@@ -51,7 +51,7 @@
           <small><!-- variable:commit-date --></small>
           <br/><br/>
           <yescript>
-            <button onclick="toggleCharacter()">
+            <button onclick="toggleUwU()">
               uwu mode
             </button>
             <button onclick="toggleMonospace()">
@@ -69,22 +69,30 @@
       </div>
       <script>
         document.body.setAttribute('class', window.localStorage.getItem("theme") || '');
-
-        function toggleCharacter() {
-          document.body.setAttribute('class', 'personality');
-          window.localStorage.setItem("theme", 'personality');
+    
+        function updateThemeClass() {
+            const theme = window.localStorage.getItem("theme") || '';
+            const retro = window.localStorage.getItem("retro") === "true" ? "retro" : "";
+            document.body.setAttribute('class', `${theme} ${retro}`.trim());
         }
-
+    
+        function toggleUwU() {
+            window.localStorage.setItem("theme", 'UwU');
+            updateThemeClass();
+        }
+    
         function toggleMonospace() {
-          document.body.setAttribute('class', 'monospace');
-          window.localStorage.setItem("theme", 'monospace');
+            window.localStorage.setItem("theme", 'monospace');
+            updateThemeClass();
         }
-
+    
         function toggleNormal() {
-          document.body.setAttribute('class', '');
-          window.localStorage.setItem("theme", '');
+            window.localStorage.setItem("theme", '');
+            updateThemeClass();
         }
-      </script>
+    
+        document.addEventListener("DOMContentLoaded", updateThemeClass);
+    </script>    
     </nav>
     <div id="content">
       <div class="inner">

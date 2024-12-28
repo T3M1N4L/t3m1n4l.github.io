@@ -28,8 +28,7 @@
 
   --bounce: cubic-bezier(0.175, 0.885, 0.32, 1.9);
 
-  --monospace: "Fira Code", "JetBrains Mono",
-    "Menlo", "Courier New", monospace;
+  --monospace: "Iosevka Term Web", "Iosevka", monospace;
 
   --width: 950px;
 }
@@ -49,7 +48,7 @@ html,
 body {
   width: 100%;
 
-  &.personality {
+  &.UwU {
     @font-face {
       font-family: "Yuruka";
       font-display: swap;
@@ -58,8 +57,7 @@ body {
       font-style: normal;
       src: url("/TTF/yuruka.ttf") format("truetype");
     }
-    --monospace: MS Gothic, "Fira Code",
-      "JetBrains Mono", "Menlo", "Courier New", monospace;
+    --monospace: MS Gothic, "Iosevka Term Web", "Iosevka", monospace;
 
     * {
       * {
@@ -136,7 +134,7 @@ body {
   }
 
   * {
-    font-family: Inter, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
   }
 }
 

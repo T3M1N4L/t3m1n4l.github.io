@@ -5,6 +5,7 @@ color: lavender
 
 styles:
   - /style.css
+  - /iosevka.css
 ---
 
 <div style="text-align:center;position:relative;margin: 120px 0;">

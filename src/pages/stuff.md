@@ -5,6 +5,7 @@ color: blue
 
 styles:
   - /style.css
+  - /iosevka.css
 ---
 
 # Stuff

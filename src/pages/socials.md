@@ -5,6 +5,7 @@ color: teal
 
 styles:
   - /style.css
+  - /iosevka.css
 ---
 
 # socials

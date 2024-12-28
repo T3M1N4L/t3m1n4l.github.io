@@ -5,6 +5,7 @@ color: mauve
 
 styles:
   - /style.css
+  - /iosevka.css
 ---
 
 # yapping
