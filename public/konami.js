@@ -46,8 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 isArrowKeyActive = false;
                 enableScroll();
                 toggleRetroEffect();
-
-                document.querySelectorAll("#konami > kbd").forEach((key) => key.classList.remove("active"));
+                setTimeout(() => {
+                    document.querySelectorAll("#konami > kbd").forEach((key) => key.classList.remove("active"));
+                }, 1000);
             }
         } else {
             position = 0;
