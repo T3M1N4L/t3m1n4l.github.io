@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 position = 0;
                 isArrowKeyActive = false;
                 enableScroll();
-                toggleRetroEffect();
                 setTimeout(() => {
                     document.querySelectorAll("#konami > kbd").forEach((key) => key.classList.remove("active"));
-                }, 1000);
+                    toggleRetroEffect();
+                }, 300);
             }
         } else {
             position = 0;
@@ -69,10 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         toggleRetroEffect();
     };
-
+    
     document.addEventListener("keydown", handleKeydown);
     document.addEventListener("keyup", handleKeyup);
     document.querySelector("#lazy").addEventListener("click", handleLazyButtonClick);
-
     updateThemeClass();
 });
