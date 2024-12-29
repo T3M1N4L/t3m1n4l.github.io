@@ -10,7 +10,7 @@
   --green: 147, 255, 138;
   --teal: 84, 222, 171;
   --sky: 137, 220, 235;
-  --sapphire: 116, 199, 236;
+  --sapphire: 116, 144, 236;
   --blue: 137, 180, 250;
   --lavender: 160, 87, 254;
   --text: 237, 241, 255;
@@ -49,14 +49,6 @@ body {
   width: 100%;
 
   &.UwU {
-    @font-face {
-      font-family: "Yuruka";
-      font-display: swap;
-      font-weight: 100;
-      font-stretch: expanded;
-      font-style: normal;
-      src: url("/TTF/yuruka.ttf") format("truetype");
-    }
     --monospace: MS Gothic, "Iosevka Term Web", "Iosevka", monospace;
 
     * {
@@ -413,7 +405,7 @@ button {
     &.active {
       color: rgb(var(--color), 1);
       border-color: rgb(var(--color), 1);
-      box-shadow: 0 0 1.5rem 0 rgb(var(--color), 0.5);
+      box-shadow: 0 0 0.5rem 0 rgb(var(--color), 0.4);
     }
   }
 }

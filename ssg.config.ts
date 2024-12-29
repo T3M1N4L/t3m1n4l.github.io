@@ -24,18 +24,18 @@ import CleanCSS from 'clean-css';
 import zlib from 'zlib';
 
 const colors: Record<string, string> = {
- "rosewater": "#f5e0dc",
+  "rosewater": "#f5e0dc",
   "flamingo": "#f2cddc",
   "pink": "#f5c2e7",
   "mauve": "#cba6f7",
   "red": "#ff637d",
   "maroon": "#eba0ac",
-  "peach": "#ffaa6e",
+  "peach": "#ffa56e",
   "yellow": "#ffe06e",
   "green": "#93ff8a",
   "teal": "#54deab",
   "sky": "#89dceb",
-  "sapphire": "#74c7ec",
+  "sapphire": "#7490ec",
   "blue": "#89b4fa",
   "lavender": "#a057fe",
   "text": "#edf1ff",
