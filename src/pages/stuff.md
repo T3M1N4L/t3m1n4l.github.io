@@ -16,3 +16,4 @@ styles:
 
 ## github pages deployments
 * <a class="no-style socials fli" href="/christmas-countdown/">/christmas-countdown</a>
+* <a class="no-style socials fli" href="/site-fonts/">/christmas-countdown</a>
