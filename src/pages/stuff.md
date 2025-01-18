@@ -14,6 +14,7 @@ styles:
 * <a class="no-style socials fli" href="/not_found/">/not_found</a>
   - same as 404 (for nekoweb)
 
-## github pages deployments
-* <a class="no-style socials fli" href="/christmas-countdown/">/christmas-countdown</a>
+## github pages deployments (useful ones)
 * <a class="no-style socials fli" href="/site-fonts/">/site-fonts</a>
+* <a class="no-style socials fli" href="/password-gen/">/password-gen</a>
+* <a class="no-style socials fli" href="/facilis/">/facilis</a>
