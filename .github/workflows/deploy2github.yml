@@ -34,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v5
       - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 'latest'
+          bun-version: 'canary'
       - name: installing dependencies
         run: bun install --frozen-lockfile
       - name: building code
