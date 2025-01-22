@@ -18,3 +18,4 @@ styles:
 * <a class="no-style socials fli" href="/site-fonts/">/site-fonts</a>
 * <a class="no-style socials fli" href="/password-gen/">/password-gen</a>
 * <a class="no-style socials fli" href="/facilis/">/facilis</a>
+* <a class="no-style socials fli" href="/cps/">/cps</a>
