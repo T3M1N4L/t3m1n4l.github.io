@@ -1,4 +1,4 @@
-import { readdir, rmdir, mkdir, stat, cp } from 'fs/promises';
+import { readdir, rm, mkdir, stat, cp } from 'fs/promises';
 import path from 'path';
 
 type Variables = Record<string, string | ((...args: { [key: string]: any }[]) => string | Promise<string>)>;
@@ -51,7 +51,7 @@ const build = async () => {
 
   const config = (await import('./ssg.config.ts')).default as Config;
 
-  await rmdir(config.outputDirectory, { recursive: true });
+  await rm(config.outputDirectory, { recursive: true, force: true });
   await mkdir(config.outputDirectory, { recursive: true });
 
   console.log('Building...');
