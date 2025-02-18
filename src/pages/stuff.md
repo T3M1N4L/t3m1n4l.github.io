@@ -10,9 +10,9 @@ styles:
 # Stuff
  various other "stuff" on this site that are not linked anywhere
 
+* <a class="no-style socials fli" href="https://sudo-flix.t3rm1n4l.dev/">.sudo-flix</a>
+* <a class="no-style socials fli" href="https://sudo-prox.t3rm1n4l.dev/">.sudo-prox</a>
 * <a class="no-style socials fli" href="/404/">/404</a>
-* <a class="no-style socials fli" href="/not_found/">/not_found</a>
-  - same as 404 (for nekoweb)
 
 ## github pages deployments (useful ones)
 * <a class="no-style socials fli" href="/site-fonts/">/site-fonts</a>
