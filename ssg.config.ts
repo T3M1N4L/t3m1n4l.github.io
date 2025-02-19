@@ -12,9 +12,8 @@ import nav from './src/nav';
 import twemoji from "twemoji";
 import * as emoji from 'node-emoji';
 
-import { readdir, writeFile } from 'fs/promises';
+import { readdir } from 'fs/promises';
 import path from 'path';
-import { XMLBuilder } from 'fast-xml-parser';
 import dedent from 'dedent';
 import * as prettier from "prettier";
 import figlet from 'figlet';
