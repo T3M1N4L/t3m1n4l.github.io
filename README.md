@@ -1,6 +1,9 @@
 # t3rm1n4l's personal site
 
-![A aesthetically pleasing preview](./public/img/preview.webp)
+<a href="https://t3rm1n4l.dev">
+  <img src="./public/img/preview.webp" alt="Aesthetically pleasing preview">
+</a>
+
 
 
 Personal site/portfolio/blog, built with [Bun](https://bun.sh/) and [SCSS](https://tailwindcss.com/), and hosted on [Github Pages](https://hackclub.app/)! ft. aesthetic, and a responsive, mobile-friendly design. Built my own SSG to build the website to go with it!
@@ -30,11 +33,3 @@ The final website is **static**, and as such, it can be built and deployed on an
 - Static-Site-Generator is located at `ssg.ts` and its configuration is located at `ssg.config.ts`. 
 - Images are stored in `public/img`
 
-# All the links (some may be down idk)
-* https://t3rm1n4l.dev/ (from github pages)
-* https://t3m1n4l.github.io/ (github)
-* https://t3rm1n4l.nekoweb.org/ (nekoweb)
-* https://t3rm1n4l.netlify.app/ (netlify)
-* https://t3m1n4l.vercel.app/ (vercel)
-
-  > Bro I've deployed this to like everything possible I swear :sob:
