@@ -45,12 +45,12 @@ i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
     <p>this very cool site</p>
   </project-card>
 
-  <project-card onclick="window.open('https://t3rm-expl-dump.vercel.app/')" style="--color:var(--peach);">
+  <project-card onclick="window.open('https://expl-dump.t3rm1n4l.dev/')" style="--color:var(--peach);">
     <h3>exploit dump</h3>
     <p>a (chromebook/cros) exploit dump</p>
   </project-card>
 
-  <project-card onclick="window.open('https://catninja.vercel.app/')" style="--color:var(--yellow);">
+  <project-card onclick="window.open('https://cat-ninja.t3rm1n4l.dev/')" style="--color:var(--yellow);">
     <h3>cat ninja</h3>
     <p>a website to play catninja and it's other romhacks</p>
   </project-card>
@@ -60,7 +60,7 @@ i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
     <p>an updated version of a devtools exploit with a better ui</p>
   </project-card>
 
-  <project-card onclick="window.open('https://vimstart.vercel.app')" style="--color:var(--teal);">
+  <project-card onclick="window.open('https://vimstart.t3rm1n4l.dev/')" style="--color:var(--teal);">
     <h3>vimstart</h3>
     <p>an interesting homepage</p>
   </project-card>
