@@ -33,3 +33,7 @@ The final website is **static**, and as such, it can be built and deployed on an
 - Static-Site-Generator is located at `ssg.ts` and its configuration is located at `ssg.config.ts`. 
 - Images are stored in `public/img`
 
+### Roadmap
+- [ ] astro rewrite
+- [ ] better center gradient for the wavy `t3rm1n4l`
+- [ ] clean up code especially css 
