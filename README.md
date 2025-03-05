@@ -34,6 +34,6 @@ The final website is **static**, and as such, it can be built and deployed on an
 - Images are stored in `public/img`
 
 ### Roadmap
-- [ ] astro rewrite
+- [ ] astro rewrite 
 - [ ] better center gradient for the wavy `t3rm1n4l`
 - [ ] clean up code especially css 
