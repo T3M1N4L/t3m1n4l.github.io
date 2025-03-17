@@ -1,6 +1,6 @@
 ---
 title: Home
-description: i'm a 13-year-old developer who works on frontend projects and has been programming for 4 years.
+description: i'm a 14-year-old developer who works on frontend projects and has been programming for 4 years.
 color: lavender
 
 styles:
@@ -32,7 +32,7 @@ styles:
 
 ## about me
 
-i'm a 13-year-old dev who does (mostly) frontend projects...
+i'm a 14-year-old dev who does (mostly) frontend projects...
 over around 4 years i learnt ~~typescript~~ css, and js skills.
 i'm also currently learning typescript, c++, and perfecting my skills in js as of now!
 i try to make eveyerthing i have amoled (fully black) themed :sunglasses:
